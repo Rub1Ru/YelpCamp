@@ -18,27 +18,21 @@ Made from beggining to end ussing all the technologies that I currently know. It
 
 <h1>Libraries</h1>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>JQuery</li>
+  <li>Body-parser</li>
+  <li>Connect-flash</li>
+  <li>Dotenv</li>
+  <li>Ejs</li>
+  <li>Express</li>
+  <li>Express-session</li>
+  <li>Method-override</li>
+  <li>Moment</li>
+  <li>Mongoose</li>
+  <li>Node-geocoder</li>
+  <li>Passport</li>
+  <li>Passport-local</li>
+  <li>Passport-local-mongoose</li>
 </ul>
-JQuery
-Body-parser
-Connect-flash
-Dotenv
-Ejs
-Express
-Express-session
-Method-override
-Moment
-Mongoose
-Node-geocoder
-Passport
-Passport-local
-Passport-local-mongoose
+
+
+
