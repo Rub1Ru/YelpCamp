@@ -22,7 +22,21 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect("mongodb://localhost/yelp_camp_14");
+// mongoose.connect("mongodb://localhost/yelp_camp_14");
+
+// const MongoClient = require("mongodb").MongoClient;
+// const uri = "mongodb+srv://Rub1:Ignis4395@cluster0-3tlbg.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// client.connect((err) => {
+// 	const collection = client.db("test").collection("devices");
+// 	// perform actions on the collection object
+// 	client.close();
+// });
+
+mongoose.connect(
+	"mongodb+srv://Rub1:" + process.env.DB_PASSWORD + "@cluster0-3tlbg.mongodb.net/test?retryWrites=true&w=majority"
+);
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -57,10 +71,15 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
 
-app.listen(3000, function() {
-	console.log("Connected to port 3000, YelpCamp");
-});
+// app.listen(3000, function() {
+// 	console.log("Connected to port 3000, YelpCamp");
+// });
 
 // app.listen(process.env.PORT, process.env.IP, function(){
 // 	console.log("The YelpCamp Server Has Started!");
 //  });
+
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+	console.log("Server Has Started!");
+});
